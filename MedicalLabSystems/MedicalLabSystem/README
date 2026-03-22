@@ -1,0 +1,59 @@
+Name: Mohamed Azab
+Student Number: 101331588
+
+Assignment: COMP2404 Assignment 3
+
+Files Included:
+- Control.cc
+- Control.h
+- Entity.cc
+- Entity.h
+- Lab.cc
+- Lab.h
+- LabTech.cc
+- LabTech.h
+- LabWork.cc
+- LabWork.h
+- LabWorkList.cc
+- LabWorkList.h
+- Patient.cc
+- Patient.h
+- TestControl.cc
+- TestControl.h
+- Tester.cc
+- Tester.h
+- View.cc
+- View.h
+- main.cc
+- test.cc
+- Makefile
+- README
+- UML.pdf (or UML.png)
+
+Brief Description of Files:
+- Entity: Base class for Patient and LabTech.
+- Patient: Represents a patient with medical conditions, pending lab work, and medical history.
+- LabTech: Represents a lab technician and stores processed lab work.
+- LabWork: Represents a single lab test, its cost, and completion status.
+- LabWorkList: Linked-list-based FIFO structure for storing LabWork pointers.
+- Lab: Main manager for patients, lab techs, and lab work flow.
+- Control: Interactive controller provided in starter code.
+- TestControl: Tester controller provided in starter code.
+- View: Menu/input boundary provided in starter code.
+- Tester: Utility testing class provided in starter code.
+- main.cc: Launches interactive version.
+- test.cc: Launches tester version.
+- Makefile: Builds both a3 and a3test.
+
+Compilation Instructions:
+- Run: make all
+
+Execution Instructions:
+- Run interactive mode with: ./a3
+- Run test mode with: ./a3test
+
+Design Notes:
+- Patients own the original LabWork objects in their pending/history lists.
+- When a LabTech processes lab work, the LabTech stores a copy of the completed LabWork.
+- This avoids double deletion and keeps memory ownership safe.
+- vector is used in Lab, which is allowed by the assignment specification.
