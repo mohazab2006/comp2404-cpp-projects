@@ -1,0 +1,150 @@
+CPP Summit
+Allocators Deep Dive
+Joe Smith
+C++, memory management, allocators
+"This talk explores advanced allocator strategies in C++, including custom allocators, pooling techniques, and how they interact with containers."
+batman.txt
+CPP Summit
+Template Metaprogramming
+Jane Doe
+C++, templates, generic programming
+"This talk examines template metaprogramming techniques in modern C++, including compile-time computation and common design patterns built with templates."
+darth.txt
+CPP Summit
+Modern Concurrency
+Bruce Wayne
+C++, concurrency, multithreading
+"This talk covers modern concurrency tools in C++, including threads, mutexes, atomics, and best practices for writing safe multithreaded code."
+genie.txt
+CPP Summit
+Performance Profiling
+Darth Vader
+C++, performance optimization, profiling
+"This talk focuses on profiling C++ applications to locate bottlenecks and apply targeted performance optimizations."
+khan.txt
+CPP Summit
+Generic Libraries
+Ada Lovelace
+C++, templates, generic programming
+"This talk explores how to build reusable generic libraries using templates and modern C++ language features."
+minotaur.txt
+AI Overlords
+Introduction to Machine Learning
+Khan
+AI, machine learning, deep learning
+"This talk introduces the core ideas behind machine learning, including supervised learning, neural networks, and training models."
+montypython.txt
+AI Overlords
+Neural Network Fundamentals
+Grace Hopper
+AI, machine learning, neural networks
+"This talk explains how neural networks operate and how they are trained to perform tasks such as classification and prediction."
+scoobie.txt
+AI Overlords
+Deep Learning in Practice
+Alan Turing
+AI, deep learning, neural networks
+"This talk explores practical techniques for implementing deep learning models and evaluating their performance."
+simpsons.txt
+AI Overlords
+Efficient Model Training
+Jane Doe
+AI, machine learning, performance optimization
+"This talk discusses techniques for optimizing machine learning training pipelines and improving training performance."
+starwars1.txt
+AI Overlords
+AI Systems at Scale
+Joe Smith
+AI, machine learning, systems
+"This talk explores how large-scale AI systems are deployed and managed in production environments."
+starwars2.txt
+Garbage Collection Con
+Modern Garbage Collection
+Grace Hopper
+memory management, garbage collection, performance optimization
+"This talk explores modern garbage collection algorithms and how they improve application performance."
+valkyrie.txt
+Garbage Collection Con
+Memory Allocation Strategies
+Ada Lovelace
+memory management, allocators, performance optimization
+"This talk discusses different allocation strategies and their effect on memory performance."
+band.txt
+Garbage Collection Con
+Concurrent Garbage Collectors
+Alan Turing
+garbage collection, concurrency, memory management
+"This talk examines how concurrent garbage collectors reduce pause times in modern runtimes."
+batman.txt
+Garbage Collection Con
+Profiling Memory Usage
+Bruce Wayne
+memory management, profiling, performance optimization
+"This talk shows how profiling tools can be used to analyze and reduce memory consumption."
+darth.txt
+Garbage Collection Con
+Allocator Design
+Joe Smith
+allocators, memory management, C++
+"This talk explores how allocator design affects memory efficiency and application performance."
+genie.txt
+Symposium of Self-Driving
+Sensor Fusion
+Khan
+AI, robotics, machine learning
+"This talk explains how self-driving systems combine data from multiple sensors to perceive the environment."
+khan.txt
+Symposium of Self-Driving
+Autonomous Navigation
+Alan Turing
+AI, robotics, systems
+"This talk explores algorithms used by autonomous vehicles to plan safe navigation paths."
+minotaur.txt
+Symposium of Self-Driving
+Real-Time Decision Making
+Grace Hopper
+AI, robotics, concurrency
+"This talk discusses how self-driving systems make real-time decisions using concurrent software systems."
+montypython.txt
+Symposium of Self-Driving
+Machine Learning for Perception
+Jane Doe
+AI, machine learning, robotics
+"This talk explores machine learning models used to recognize objects and interpret road scenes."
+scoobie.txt
+Symposium of Self-Driving
+High-Performance Robotics Software
+Bruce Wayne
+robotics, performance optimization, C++
+"This talk examines how performance optimization techniques are applied to robotics software."
+simpsons.txt
+Ruby is Still a Thing Con
+Ruby Performance
+Darth Vader
+Ruby, performance optimization, profiling
+"This talk discusses profiling Ruby applications and applying performance optimizations."
+starwars1.txt
+Ruby is Still a Thing Con
+Memory Management in Ruby
+Ada Lovelace
+Ruby, memory management, garbage collection
+"This talk explores how Ruby manages memory and how developers can reduce memory usage."
+starwars2.txt
+Ruby is Still a Thing Con
+Concurrent Ruby
+Grace Hopper
+Ruby, concurrency, multithreading
+"This talk covers concurrency tools available in Ruby and when to use them."
+valkyrie.txt
+Ruby is Still a Thing Con
+Metaprogramming in Ruby
+Jane Doe
+Ruby, metaprogramming, programming languages
+"This talk explains Ruby's powerful metaprogramming capabilities and practical use cases."
+band.txt
+Ruby is Still a Thing Con
+Scaling Ruby Applications
+Joe Smith
+Ruby, systems, performance optimization
+"This talk explores strategies for scaling Ruby applications in production systems."
+batman.txt
