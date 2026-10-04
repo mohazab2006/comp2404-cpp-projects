@@ -1,0 +1,67 @@
+COMP2404A — Assignment 1 (HomeShare CRUD)
+
+Name: Mohamed Azab
+Student Number: 101331588
+
+------------------------------------------------------------
+Overview
+------------------------------------------------------------
+This assignment implements a simple backend system for a HomeShare-style
+reservation manager (similar to Airbnb). The system supports adding/removing
+rentals, adding/removing reservations, and printing rentals/reservations.
+All data is stored using statically allocated arrays (no dynamic memory).
+
+The program is tested using the provided Tester class and the menu in main.cc.
+
+
+------------------------------------------------------------
+Included Files
+------------------------------------------------------------
+
+Provided:
+- main.cc
+  Runs the automated test menu used for marking.
+- Tester.h / Tester.cc
+  Test suite utilities (output capture + checks).
+- Category.h / Category.cc
+  Category enum and categoryToString() helper function.
+- defs.h
+  Contains MAX_ARRAY constant.
+
+Implemented by me:
+- Date.h / Date.cc
+  Date class updated for this assignment. Added equals() and lessThan().
+  Also includes the required month-name bug fix from the assignment update.
+- Reservation.h / Reservation.cc
+  Stores reservation info (name, number of people, check-in/out dates).
+- Rental.h / Rental.cc
+  Stores rental info and manages reservations for one rental unit.
+  Reservations are stored sorted by date with no overlaps.
+- HomeShare.h / HomeShare.cc
+  Main manager class that stores rentals and supports CRUD operations.
+
+Build:
+- Makefile
+  Compiles all code and produces the executable: a1
+
+
+------------------------------------------------------------
+Compilation Instructions
+------------------------------------------------------------
+To compile:
+
+  make clean
+  make
+
+
+------------------------------------------------------------
+Execution Instructions
+------------------------------------------------------------
+To run:
+
+  ./a1
+
+Then select one of the menu options (1–6).
+Option 6 runs all automated tests and displays the total score.
+
+
