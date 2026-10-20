@@ -1,0 +1,44 @@
+COMP 2404 B2 - Assignment #2
+
+Name: Mohamed Azab
+Student Number: 101331588
+
+Program purpose:
+This C++11 program manages a telephone company's subscribers and the
+metadata of their sent and received text messages. The user can display
+all subscribers and their messages, or show the most frequent sending
+and receiving subscribers. Messages are stored once in the primary
+telephone-company collection; subscribers reference those messages.
+
+Files:
+Control.h       Control.cc
+Date.h          Date.cc
+Msg.h           Msg.cc
+MsgArray.h      MsgArray.cc
+Subscriber.h    Subscriber.cc
+Telco.h         Telco.cc
+Time.h          Time.cc
+View.h          View.cc
+defs.h
+main.cc
+Makefile
+README
+
+Compiling (from the directory containing the source files):
+    make
+
+Running:
+    ./a2
+
+No command-line arguments or external data files are needed.
+
+Menu:
+    1 - Compute most frequent sender
+    2 - Compute most frequent receiver
+    3 - Print subscribers
+    0 - Exit
+
+Cleaning object files and the executable:
+    make clean
+
+Environment: Ubuntu Linux course VM with g++ and make; C++11 standard.
