@@ -1,0 +1,27 @@
+COMP 2404 Assignment #1
+Name: Mohamed Azab
+
+Purpose:
+This program manages customers, bank accounts, and debit/credit transactions.
+Transactions are stored in date order, pending transactions can be processed,
+and successfully processed transactions are stored in the logged collection.
+
+Files:
+main.cc - Main control flow and provided global helper/data-loading functions.
+defs.h - Provided constants, transaction type, and global function prototypes.
+Date.h/Date.cc - Date class and date comparison/printing functions.
+Account.h/.cc - Account class and debit/credit operations.
+Customer.h/.cc - Customer class and customer account collection.
+Transaction.h/.cc - Transaction class and transaction processing.
+Bank.h/Bank.cc - Bank class and customer/account/transaction management.
+Makefile - Builds the program and provides a clean target.
+README - Program description and build/run instructions.
+
+Compilation:
+make
+
+Execution:
+./a1
+
+Cleanup:
+make clean
