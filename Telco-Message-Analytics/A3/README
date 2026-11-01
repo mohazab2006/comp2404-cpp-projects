@@ -1,0 +1,32 @@
+COMP 2404 B2 - Assignment #3
+Name: Mohamed Azab 101331588
+
+Purpose:
+  Manage a telephone company's text messages and subscribers, display the
+  chronological message list, display messages for each subscriber, and
+  rank subscribers by their messaging activity.
+
+Source files:
+  main.cc Control.cc View.cc Time.cc Date.cc Subscriber.cc SubArray.cc
+  Msg.cc ExternMsg.cc InternMsg.cc MsgList.cc Telco.cc
+
+Header files:
+  Control.h View.h Time.h Date.h Subscriber.h SubArray.h Msg.h
+  ExternMsg.h InternMsg.h MsgList.h Telco.h defs.h
+
+Compilation (on the COMP 2404 Ubuntu VM):
+  make
+
+Run:
+  ./a3
+
+Clean compilation artifacts:
+  make clean
+
+Command-line arguments: None.
+
+Menu:
+  1 - Print all messages
+  2 - Print all subscribers
+  3 - Print subscribers by activity
+  0 - Exit
