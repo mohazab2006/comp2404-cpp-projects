@@ -24,6 +24,10 @@ void Control::launch()
       telco->printSubscribers();
     else if (choice == 3)
       telco->printByActivity();
+    else if (choice == 4)
+      telco->printFrequent(C_SENDER);
+    else if (choice == 5)
+      telco->printFrequent(C_RECEIVER);
 
   } while (choice != 0);
 }

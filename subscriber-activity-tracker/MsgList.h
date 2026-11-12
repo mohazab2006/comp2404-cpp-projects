@@ -18,6 +18,7 @@
  *   getSize()   - returns the number of messages in the list
  *   add()       - inserts a message in descending chronological order
  *   copySubset()- adds references to messages matching a phone number
+ *   copyDirection() - adds messages sent or received by a phone number
  *   cleanup()   - deletes all messages and list nodes
  *   print()     - prints messages forward and then backward
  */
@@ -42,6 +43,7 @@ class MsgList
     int getSize();
     void add(Msg*);
     void copySubset(string, MsgList&);
+    void copyDirection(string, MsgList&, SubscriberType);
     void cleanup();
     void print();
 };

@@ -1,0 +1,37 @@
+COMP 2404 - Assignment #3 
+Name: Mohamed Azab
+Student ID: 101331588
+
+Purpose:
+  Manage telephone company subscribers and chronological messages.
+  Print all messages, each subscriber's messages, and rankings by overall
+  activity, sending frequency, or receiving frequency. Internal messages
+  refer to existing Subscriber objects, and external messages store
+  phone numbers. This includes A2's sender and receiver ranking features.
+
+Source files:
+  main.cc Control.cc View.cc Time.cc Date.cc Subscriber.cc SubArray.cc
+  Msg.cc ExternMsg.cc InternMsg.cc MsgList.cc Telco.cc
+
+Header files:
+  Control.h View.h Time.h Date.h Subscriber.h SubArray.h Msg.h
+  ExternMsg.h InternMsg.h MsgList.h Telco.h defs.h
+
+Compilation:
+  make
+
+Launching:
+  ./a3
+
+There are no command-line arguments.
+Menu:
+  1 - Print all messages
+  2 - Print all subscribers and their messages
+  3 - Print subscribers by overall activity
+  4 - Rank subscribers by messages sent (A2 bonus)
+  5 - Rank subscribers by messages received (A2 bonus)
+  0 - Exit
+
+Cleanup:
+  make clean
+

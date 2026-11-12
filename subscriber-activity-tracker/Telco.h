@@ -20,6 +20,7 @@
  *   printMessages()   - prints every message
  *   printSubscribers()- prints subscribers and their messages
  *   printByActivity() - prints subscribers ranked by message count
+ *   printFrequent()   - ranks subscribers by sent or received messages
  *   findSub()         - finds a subscriber using an output parameter
  */
 class Telco
@@ -33,7 +34,8 @@ class Telco
     void printMessages();
     void printSubscribers();
     void printByActivity();
-    bool findSub(const string&, Subscriber*&);
+    void printFrequent(SubscriberType);
+    bool findSub(const string&, Subscriber**);
 
   private:
     string name;

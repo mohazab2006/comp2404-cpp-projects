@@ -17,22 +17,25 @@ void Telco::addSub(const string& phoneNum)
   Subscriber* existing = 0;
 
   if (phoneNum.empty() || subscribers.getSize() >= MAX_ARR_SIZE ||
-      findSub(phoneNum, existing))
+      findSub(phoneNum, &existing))
     return;
 
   Subscriber* sub = new Subscriber(phoneNum);
   subscribers.add(sub);
 }
 
-bool Telco::findSub(const string& phoneNum, Subscriber*& sub)
+bool Telco::findSub(const string& phoneNum, Subscriber** sub)
 {
-  sub = 0;
+  if (sub == 0)
+    return false;
+
+  *sub = 0;
 
   for (int i = 0; i < subscribers.getSize(); ++i) {
     Subscriber* current = subscribers.get(i);
 
     if (current != 0 && current->getPhoneNum() == phoneNum) {
-      sub = current;
+      *sub = current;
       return true;
     }
   }
@@ -46,8 +49,8 @@ void Telco::addMsg(const string& srcNum, const string& destNum,
   Subscriber* source = 0;
   Subscriber* destination = 0;
 
-  bool hasSource = findSub(srcNum, source);
-  bool hasDestination = findSub(destNum, destination);
+  bool hasSource = findSub(srcNum, &source);
+  bool hasDestination = findSub(destNum, &destination);
 
   Msg* msg = 0;
 
@@ -120,6 +123,45 @@ void Telco::printByActivity()
 
     MsgList subset;
     subset.copySubset(sub->getPhoneNum(), messages);
+    subset.print();
+    cout << endl;
+  }
+}
+
+void Telco::printFrequent(SubscriberType direction)
+{
+  if (direction == C_SENDER)
+    cout << endl << "==> MOST FREQUENT SENDING SUBSCRIBERS:" << endl << endl;
+  else if (direction == C_RECEIVER)
+    cout << endl << "==> MOST FREQUENTLY RECEIVING SUBSCRIBERS:" << endl << endl;
+  else
+    return;
+
+  int count = subscribers.getSize();
+  if (count == 0) {
+    cout << "No subscribers." << endl;
+    return;
+  }
+
+  int totals[MAX_ARR_SIZE];
+  int indexes[MAX_ARR_SIZE];
+
+  for (int i = 0; i < count; ++i) {
+    Subscriber* sub = subscribers.get(i);
+    MsgList subset;
+    subset.copyDirection(sub->getPhoneNum(), messages, direction);
+    totals[i] = subset.getSize();
+    indexes[i] = i;
+  }
+
+  selectionSort(count, totals, indexes);
+
+  for (int i = 0; i < count; ++i) {
+    Subscriber* sub = subscribers.get(indexes[i]);
+    MsgList subset;
+    subset.copyDirection(sub->getPhoneNum(), messages, direction);
+
+    cout << "FROM: " << sub->getPhoneNum() << ":" << endl;
     subset.print();
     cout << endl;
   }

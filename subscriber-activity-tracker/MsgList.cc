@@ -57,14 +57,42 @@ void MsgList::add(Msg* msg)
 
 void MsgList::copySubset(string phoneNum, MsgList& origList)
 {
-  if (&origList == this)
-    return;
-
   Node* current = origList.head;
-  while (current != 0) {
+  int originalSize = origList.size;
+
+  for (int i = 0; i < originalSize; ++i) {
+    Node* nextNode = current->next;
     if (current->data->getSrc() == phoneNum ||
         current->data->getDest() == phoneNum)
       add(current->data);
+
+    current = nextNode;
+  }
+}
+
+void MsgList::copyDirection(string phoneNum, MsgList& origList,
+                            SubscriberType direction)
+{
+  if (direction != C_SENDER && direction != C_RECEIVER)
+    return;
+
+  if (&origList == this) {
+    MsgList original;
+    Node* current = head;
+    while (current != 0) {
+      original.add(current->data);
+      current = current->next;
+    }
+    copyDirection(phoneNum, original, direction);
+    return;
+  }
+
+  Node* current = origList.head;
+  while (current != 0) {
+    Msg* msg = current->data;
+    if ((direction == C_SENDER && msg->getSrc() == phoneNum) ||
+        (direction == C_RECEIVER && msg->getDest() == phoneNum))
+      add(msg);
 
     current = current->next;
   }
@@ -74,6 +102,13 @@ void MsgList::cleanup()
 {
   Node* current = head;
   while (current != 0) {
+    Node* later = current->next;
+    while (later != 0) {
+      if (later->data == current->data)
+        later->data = 0;
+      later = later->next;
+    }
+
     Node* nextNode = current->next;
     delete current->data;
     delete current;
