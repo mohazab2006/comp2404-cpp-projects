@@ -1,0 +1,28 @@
+COMP 2404 B2 - Assignment 4
+
+Name: Mohamed Azab 101331588
+
+Purpose: Simulate Timmy and Harold climbing out of a pit while snorcs
+         move randomly and cause damage in collisions.
+
+Header files: defs.h, Escape.h, Position.h, Pit.h, Participant.h,
+              PartArray.h, Hero.h, Snorc.h
+
+Source files: main.cc, Escape.cc, Position.cc, Pit.cc, Participant.cc,
+              PartArray.cc, Hero.cc, Snorc.cc, random.cc
+
+Other files: Makefile, README
+Data files: None
+
+Compilation (Ubuntu Linux with g++ C++11):
+  make
+
+To run the program:
+  ./escape
+
+There are no command-line arguments.
+The program displays each step of the randomized simulation and ends
+when both heroes have escaped or died.
+
+To remove the executable and compiled object files:
+  make clean
